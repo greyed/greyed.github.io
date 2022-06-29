@@ -1,0 +1,282 @@
+
+/*---- Hide scrollbar in top text box -----*/
+.myCON{
+ 
+ overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/*------- this changes description in Spotfire visuals -------*/
+
+.sf-element-visualization-description.sfpc-top{
+    /*color:#830051!important;*/
+    font-weight: bold !important;
+    font-size: 14px !important;   
+ }
+
+ 
+/*----- this is used for Reset Filter Button ---------*/
+
+ .filter .sfc-action-button, .modaleCol .sfc-action-button {   
+    font-size: 12px !important;
+    font-family: 'Trebuchet MS',  'Roboto', sans-serif !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    height:23px  !important;
+    width:165px  !important;
+    color:#fff !important;
+    font-weight:normal   !important;
+    text-decoration: none !important;
+    background: #6c6e74 !important;
+    background-image: -webkit-linear-gradient(top, #6c6e74,#4b4d51) !important;
+    background-image: -moz-linear-gradient(top, #6c6e74,#4b4d51) !important;
+    background-image: -ms-linear-gradient(top, #6c6e74,#4b4d51) !important;
+    background-image: -o-linear-gradient(top, #6c6e74,#4b4d51) !important;
+    background-image: linear-gradient(to bottom, #6c6e74,#4b4d51)
+    -webkit-border-radius: 28 !important;
+    -moz-border-radius: 28 !important;
+    border-radius: 3px !important;
+    /*align all left*/
+    float:center;  
+}
+
+.filter .sfc-action-button:hover, .modaleCol .sfc-action-button:hover{
+    background:#F0AB00 !important;
+    color:#000!important; 
+    cursor:pointer!important;
+}
+
+/*------------this is used for filter side panel  -------------*/
+
+.w3-sidebar{height:95%; width:220px;background-color:#f1f1f1;position:fixed!important;z-index:1;overflow:auto;}
+.w3-bar-block .w3-dropdown-hover,.w3-bar-block .w3-dropdown-click{width:100%}
+.w3-card,.w3-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+.w3-animate-right{position:relative;animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+.w3-bar .w3-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0; }
+.w3-large{font-size:12px!important;float:right}
+.w3-xlarge{font-size:24px!important}
+.w3-btn,.w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;color:#830051}   
+
+ 
+/*----- filter panel headers ------- */
+
+.myHD{
+text-align:center;font-weight:bold; color:#000000;
+}
+.myCL{
+padding-left:1vw
+}
+
+
+
+/* RIGHT PANEL COLLAPSE */
+
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 6px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 2px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+
+/*------------END of filter side panel  -------------*/
+
+
+
+
+/*----------info Button (additional modal)---------------*/
+
+.openmodinfo,.openmodcol, a:link, a:visited {
+    text-decoration: none  !important;
+}
+.btn-close {
+  color: #aaaaaa !important;
+  font-size: 20px;
+  text-decoration: none;
+  padding:20px;
+  position: absolute;
+  right: 7px;
+  top: 0;
+}
+
+.btn-close:hover {
+  color: #919191;
+}
+
+
+.modaleCol:before, .modaleInfo:before  {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.opened .modal-dialog1,.opened .modal-dialog3  {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  top: 5%;
+}
+
+ .modal-dialog1, .modal-dialog3  {
+  background: #fefefe;
+  border: #333333 solid 0px;
+  border-radius: 5px;
+  margin-left: -380px;
+  text-align:center;
+  position: fixed;
+  top: 2%;
+  left: 60%;
+  margin-top:0%;
+  z-index: 11;
+  width: 500px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.3);
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  box-shadow: 5px 10px 5px  grey;
+}
+
+
+ .modal-body3 {
+  padding: 5px;
+}
+
+.modal-header3,
+.modal-footer3 {
+  padding: 5px 5px;
+}
+.modal-header3 {
+  border-bottom: #eeeeee solid 1px;
+
+}
+.modal-header3 h2 {
+  background:#830051;
+  color:white;
+  font-size: 20px;
+}
+
+.modal-body3 ul, .modal-body3 ul li  {
+  font-size: 14px !important;
+  font-family: 'Trebuchet MS',  'Roboto', sans-serif !important;
+  list-style-type: none!important; /*circle*/
+  line-height: 1.6;
+  margin-left: 10px;
+
+}
+  
+.modal-body3 ul li b{
+  color:#830051;!important;
+  display: block !important;
+
+}
+
+
+.openmodinfo, .openmodcol{
+   content: "";
+	position: absolute;
+	width: 190px;
+	height: 25px;
+        font-size:14px;
+	background: #4b4d51 !important;
+	color:#FFC000 !important;
+	border: 0.1px solid #fff;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 0px;
+	overflow: hidden;
+	transition: all .3s cubic-bezier(.67,.13,.1,.81), transform .15s cubic-bezier(.67,.13,.1,.81);
+}
+ 
+.openmodinfo:active, .openmodcol:active {
+	transform: translateY(3px);
+}
+.openmodinfo:before, .openmodinfo:after,.openmodcol:before, .openmodcol:after {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	transition: all .3s cubic-bezier(.67,.13,.1,.81);
+}
+
+.openmodinfo:before {
+	content: 'Information';
+}
+
+.openmodcol:before {
+	content: 'Select Registration Columns';
+}
+
+.openmodinfo:after {
+	 content:'Information';
+	color:yellow !important;
+	top: -60px;
+	opacity: 0;
+}
+.openmodcol:after {
+	 content:'Select Registration Columns';
+	color:yellow !important;
+	top: -60px;
+	opacity: 0;
+}
+
+.openmodinfo:hover:after, .openmodcol:hover:after {
+	top: 0px;
+	opacity: 1;
+        color:black;
+	background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.075), gray);
+	background-image: linear-gradient(to top, rgba(0,0,0,.075), gray);
+        box-shadow: inset 0 -1px 0 rgba(0,0,0,.09),inset 0 1px 0 rgba(255,255,255,.04), 0 0 1px rgba(0,0,0,.3), 0 0 10px rgba(0,0,0,.1);
+}
+.openmodinfo:hover:before {
+	top: 60px;
+	opacity: 1;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
